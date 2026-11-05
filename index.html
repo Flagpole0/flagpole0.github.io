@@ -159,13 +159,72 @@ details{
 <section class="card">
     <h2>Projects</h2>
 
-    <ul>
-        <li>PowerShell Automation Scripts</li>
-        <li>Microsoft 365 Administration Projects</li>
-        <li>Endpoint Deployment Solutions</li>
-        <li>IT Documentation & SOP Development</li>
-        <li>AI-Assisted Productivity Workflows</li>
-    </ul>
+<section class="card">
+    <h2>Public Repositories</h2>
+
+    <div id="repo-list">
+        Loading repositories...
+    </div>
+    <script>
+async function loadRepos() {
+    const container = document.getElementById('repo-list');
+
+    try {
+        const response = await fetch(
+            'https://api.github.com/users/Flagpole0/repos?sort=updated&per_page=100'
+        );
+
+        const repos = await response.json();
+
+        repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+        container.innerHTML = '';
+
+        repos.forEach(repo => {
+            if (repo.fork) return;
+
+            const card = document.createElement('div');
+
+            card.style.marginBottom = '20px';
+            card.style.padding = '15px';
+            card.style.border = '1px solid #334155';
+            card.style.borderRadius = '8px';
+
+            card.innerHTML = `
+                <h3>
+                    <a href="${repo.html_url}" target="_blank">
+                        ${repo.name}
+                    </a>
+                </h3>
+
+                <p>${repo.description || 'No description provided.'}</p>
+
+                <p>
+                    ⭐ ${repo.stargazers_count}
+                    &nbsp;&nbsp;
+                    🍴 ${repo.forks_count}
+                    &nbsp;&nbsp;
+                    💻 ${repo.language || 'N/A'}
+                </p>
+
+                <p>
+                    Updated:
+                    ${new Date(repo.updated_at).toLocaleDateString()}
+                </p>
+            `;
+
+            container.appendChild(card);
+        });
+    }
+    catch (error) {
+        container.innerHTML =
+            '<p>Unable to load repositories.</p>';
+    }
+}
+
+loadRepos();
+</script>
+
 </section>
 
 <section class="card">
