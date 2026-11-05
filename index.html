@@ -1,1 +1,238 @@
-tets
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Naster | IT Specialist III</title>
+
+<style>
+:root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#e2e8f0;
+    --accent:#38bdf8;
+    --border:#334155;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+header{
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    color:var(--accent);
+}
+
+header p{
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:25px;
+}
+
+h2{
+    color:var(--accent);
+    margin-bottom:15px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+a{
+    color:var(--accent);
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:10px;
+}
+
+.skill{
+    background:#111827;
+    border:1px solid var(--border);
+    padding:10px;
+    border-radius:8px;
+    text-align:center;
+}
+
+.button{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 16px;
+    border-radius:8px;
+    background:var(--accent);
+    color:#000;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    margin-top:40px;
+    padding:20px;
+    color:#94a3b8;
+}
+
+code{
+    display:block;
+    background:#111827;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    margin-top:10px;
+}
+
+details{
+    margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <h1>Alex Naster</h1>
+    <p>IT Specialist III | Titusville, Florida</p>
+    <p>Microsoft 365 • PowerShell • Endpoint Management • IT Infrastructure</p>
+</header>
+
+<section class="card">
+    <h2>About Me</h2>
+    <p>
+        I'm an IT Specialist focused on systems administration,
+        endpoint support, Microsoft 365 technologies, automation,
+        and operational efficiency. I enjoy building tools and
+        documentation that improve IT processes and user experience.
+    </p>
+</section>
+
+<section class="card">
+    <h2>Technical Skills</h2>
+
+    <div class="skills">
+        <div class="skill">Microsoft 365</div>
+        <div class="skill">PowerShell</div>
+        <div class="skill">Windows Administration</div>
+        <div class="skill">Active Directory</div>
+        <div class="skill">Azure</div>
+        <div class="skill">Intune</div>
+        <div class="skill">Networking</div>
+        <div class="skill">Endpoint Management</div>
+        <div class="skill">Automation</div>
+    </div>
+</section>
+
+<section class="card">
+    <h2>Projects</h2>
+
+    <ul>
+        <li>PowerShell Automation Scripts</li>
+        <li>Microsoft 365 Administration Projects</li>
+        <li>Endpoint Deployment Solutions</li>
+        <li>IT Documentation & SOP Development</li>
+        <li>AI-Assisted Productivity Workflows</li>
+    </ul>
+</section>
+
+<section class="card">
+    <h2>GitHub</h2>
+
+    <p>
+        https://github.com/Flagpole0
+            github.com/Flagpole0
+        </a>
+    </p>
+</section>
+
+<section class="card">
+    <h2>Contact</h2>
+
+    <p>
+        📧 Email:
+        YOUR_EMAIL@example.com
+            YOUR_EMAIL@example.com
+        </a>
+    </p>
+
+    <br>
+
+    <h3>Secure Contact (PGP)</h3>
+
+    <p>Fingerprint:</p>
+
+    <code>
+XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX
+    </code>
+
+    publickey.asc
+        Download PGP Public Key
+    </a>
+
+    <details>
+        <summary>View Public Key</summary>
+
+<code>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+Paste your exported ASCII-armored public key here.
+
+-----END PGP PUBLIC KEY BLOCK-----
+</code>
+
+    </details>
+</section>
+
+<section class="card">
+    <h2>Resume</h2>
+
+    <p>
+        Download my current resume:
+    </p>
+
+    resume.pdf
+        Download Resume
+    </a>
+</section>
+
+<footer>
+    © 2026 Alex Naster | Built with GitHub Pages
+</footer>
+
+</div>
+
+</body>
+</html>
